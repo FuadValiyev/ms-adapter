@@ -224,3 +224,92 @@ ERROR in ch.qos.logback.core.joran.action.AppenderAction - Missing attribute [na
 }
 
 2025-01-20T03:08:13.654+04:00  INFO 9412 --- [ms-adapter] [http-nio-8080-exec-5] a.c.m.c.RequestResponseLoggingFilter     : <<< Outgoing Response => status=200, duration=7ms, body={"data":[{"ID":1,"NAME":"Alice"}]}
+2025-01-20T14:06:10.813+04:00  INFO 39964 --- [ms-adapter] [main] a.c.msadapter.MsAdapterApplication       : Starting MsAdapterApplication using Java 17.0.12 with PID 39964 (D:\Projects\ms-adapter\build\classes\java\main started by Fuad Valiyev in D:\Projects\ms-adapter)
+2025-01-20T14:06:10.819+04:00  INFO 39964 --- [ms-adapter] [main] a.c.msadapter.MsAdapterApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-01-20T14:06:14.239+04:00  INFO 39964 --- [ms-adapter] [main] a.c.msadapter.MsAdapterApplication       : Started MsAdapterApplication in 4.13 seconds (process running for 6.049)
+2025-01-20T14:07:06.452+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-1] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0001, time=2025-01-20T14:07:06.452827] Incoming query: SELECT * FROM users where id =1
+2025-01-20T14:07:06.515+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-1] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0001] SELECT returned 1 rows
+2025-01-20T14:07:06.516+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-1] a.c.msadapter.service.QueryService       : [{ID=1, NAME=Alice}]
+2025-01-20T14:07:06.582+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-1] a.c.m.c.RequestResponseLoggingFilter     : >>> Incoming Request => method=POST, uri=/api/v1/query/execute, requestNumber=REQ-20250119-0001, body={
+  "requestNumber": "REQ-20250119-0001",
+  "query": "SELECT * FROM users where id =1"
+}
+
+2025-01-20T14:07:06.584+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-1] a.c.m.c.RequestResponseLoggingFilter     : <<< Outgoing Response => status=200, duration=321ms, body={"data":[{"ID":1,"NAME":"Alice"}]}
+2025-01-20T14:07:13.388+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-9] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0001, time=2025-01-20T14:07:13.388761600] Incoming query: SELECT * FROM users where id =2
+2025-01-20T14:07:13.391+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-9] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0001] SELECT returned 1 rows
+2025-01-20T14:07:13.392+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-9] a.c.msadapter.service.QueryService       : [{ID=2, NAME=Bob}]
+2025-01-20T14:07:13.394+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-9] a.c.m.c.RequestResponseLoggingFilter     : >>> Incoming Request => method=POST, uri=/api/v1/query/execute, requestNumber=REQ-20250119-0001, body={
+  "requestNumber": "REQ-20250119-0001",
+  "query": "SELECT * FROM users where id =2"
+}
+
+2025-01-20T14:07:13.395+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-9] a.c.m.c.RequestResponseLoggingFilter     : <<< Outgoing Response => status=200, duration=8ms, body={"data":[{"ID":2,"NAME":"Bob"}]}
+2025-01-20T14:08:04.796+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-4] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0002, time=2025-01-20T14:08:04.796651700] Incoming query: SELECT * FROM users where id =2
+2025-01-20T14:08:04.798+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-4] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0002] SELECT returned 1 rows
+2025-01-20T14:08:04.800+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-4] a.c.msadapter.service.QueryService       : [{ID=2, NAME=Bob}]
+2025-01-20T14:08:04.801+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-4] a.c.m.c.RequestResponseLoggingFilter     : >>> Incoming Request => method=POST, uri=/api/v1/query/execute, requestNumber=REQ-20250119-0002, body={
+  "requestNumber": "REQ-20250119-0002",
+  "query": "SELECT * FROM users where id =2"
+}
+
+2025-01-20T14:08:04.801+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-4] a.c.m.c.RequestResponseLoggingFilter     : <<< Outgoing Response => status=200, duration=6ms, body={"data":[{"ID":2,"NAME":"Bob"}]}
+2025-01-20T14:08:33.501+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-5] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0002, time=2025-01-20T14:08:33.501972400] Incoming query: SELECT * FROM users where id =2
+2025-01-20T14:08:33.504+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-5] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0002] SELECT returned 1 rows
+2025-01-20T14:08:33.505+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-5] a.c.msadapter.service.QueryService       : [{ID=2, NAME=Bob}]
+2025-01-20T14:08:33.511+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-5] a.c.m.c.RequestResponseLoggingFilter     : >>> Incoming Request => method=POST, uri=/api/v1/query/execute, requestNumber=REQ-20250119-0002, body={
+  "requestNumber": "REQ-20250119-0002",
+  "query": "SELECT * FROM users where id =2"
+}
+
+2025-01-20T14:08:33.511+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-5] a.c.m.c.RequestResponseLoggingFilter     : <<< Outgoing Response => status=200, duration=12ms, body={"data":[{"ID":2,"NAME":"Bob"}]}
+2025-01-20T14:10:03.638+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-7] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0002, time=2025-01-20T14:10:03.638429100] Incoming query: SELECT * FROM users
+2025-01-20T14:10:03.654+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-7] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0002] SELECT returned 2 rows
+2025-01-20T14:10:03.659+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-7] a.c.msadapter.service.QueryService       : [{ID=1, NAME=Alice}, {ID=2, NAME=Bob}]
+2025-01-20T14:10:03.665+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-7] a.c.m.c.RequestResponseLoggingFilter     : >>> Incoming Request => method=POST, uri=/api/v1/query/execute, requestNumber=REQ-20250119-0002, body={
+  "requestNumber": "REQ-20250119-0002",
+  "query": "SELECT * FROM users"
+}
+
+2025-01-20T14:10:03.666+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-7] a.c.m.c.RequestResponseLoggingFilter     : <<< Outgoing Response => status=200, duration=28ms, body={"data":[{"ID":1,"NAME":"Alice"},{"ID":2,"NAME":"Bob"}]}
+2025-01-20T14:10:51.697+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-10] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0002, time=2025-01-20T14:10:51.697104900] Incoming query: SELECT * FROM users
+2025-01-20T14:10:51.703+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-10] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0002] SELECT returned 2 rows
+2025-01-20T14:10:51.705+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-10] a.c.msadapter.service.QueryService       : [{ID=1, NAME=Alice}, {ID=2, NAME=Bob}]
+2025-01-20T14:10:51.709+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-10] a.c.m.c.RequestResponseLoggingFilter     : >>> Incoming Request => method=POST, uri=/api/v1/query/execute, requestNumber=REQ-20250119-0002, body={
+  "requestNumber": "REQ-20250119-0002",
+  "query": "SELECT * FROM users"
+}
+
+2025-01-20T14:10:51.710+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-10] a.c.m.c.RequestResponseLoggingFilter     : <<< Outgoing Response => status=200, duration=15ms, body={"data":[{"ID":1,"NAME":"Alice"},{"ID":2,"NAME":"Bob"}]}
+2025-01-20T14:10:59.922+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-3] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0002, time=2025-01-20T14:10:59.922105600] Incoming query: SELECT * FROM users where id =1
+2025-01-20T14:10:59.923+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-3] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0002] SELECT returned 1 rows
+2025-01-20T14:10:59.924+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-3] a.c.msadapter.service.QueryService       : [{ID=1, NAME=Alice}]
+2025-01-20T14:10:59.927+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-3] a.c.m.c.RequestResponseLoggingFilter     : >>> Incoming Request => method=POST, uri=/api/v1/query/execute, requestNumber=REQ-20250119-0002, body={
+  "requestNumber": "REQ-20250119-0002",
+  "query": "SELECT * FROM users where id =1"
+}
+
+2025-01-20T14:10:59.928+04:00  INFO 39964 --- [ms-adapter] [http-nio-8080-exec-3] a.c.m.c.RequestResponseLoggingFilter     : <<< Outgoing Response => status=200, duration=9ms, body={"data":[{"ID":1,"NAME":"Alice"}]}
+2025-01-20T14:11:38.141+04:00  INFO 38312 --- [ms-adapter] [main] a.c.msadapter.MsAdapterApplication       : Starting MsAdapterApplication using Java 17.0.12 with PID 38312 (D:\Projects\ms-adapter\build\classes\java\main started by Fuad Valiyev in D:\Projects\ms-adapter)
+2025-01-20T14:11:38.145+04:00  INFO 38312 --- [ms-adapter] [main] a.c.msadapter.MsAdapterApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-01-20T14:11:41.335+04:00  INFO 38312 --- [ms-adapter] [main] a.c.msadapter.MsAdapterApplication       : Started MsAdapterApplication in 3.772 seconds (process running for 5.199)
+2025-01-20T14:11:49.852+04:00  INFO 38312 --- [ms-adapter] [http-nio-8080-exec-2] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0002, time=2025-01-20T14:11:49.852359300] Incoming query: SELECT * FROM users where id =1
+2025-01-20T14:11:49.934+04:00  INFO 38312 --- [ms-adapter] [http-nio-8080-exec-2] a.c.msadapter.service.QueryService       : [requestNumber=REQ-20250119-0002] SELECT returned 1 rows
+2025-01-20T14:11:49.935+04:00  INFO 38312 --- [ms-adapter] [http-nio-8080-exec-2] a.c.msadapter.service.QueryService       : [{ID=1, NAME=Alice}]
+2025-01-20T14:11:50.026+04:00  INFO 38312 --- [ms-adapter] [http-nio-8080-exec-2] a.c.m.c.RequestResponseLoggingFilter     : >>> Incoming Request => method=POST, uri=/api/v1/query/execute, requestNumber=REQ-20250119-0002, body={
+  "requestNumber": "REQ-20250119-0002",
+  "query": "SELECT * FROM users where id =1"
+}
+
+2025-01-20T14:11:50.028+04:00  INFO 38312 --- [ms-adapter] [http-nio-8080-exec-2] a.c.m.c.RequestResponseLoggingFilter     : <<< Outgoing Response => status=200, duration=350ms, body={"data":[{"ID":1,"NAME":"Alice"}]}
+2025-01-20T14:17:11.503+04:00  INFO 5760 --- [ms-adapter] [main] a.c.msadapter.MsAdapterApplication       : Starting MsAdapterApplication using Java 17.0.12 with PID 5760 (D:\Projects\ms-adapter\build\classes\java\main started by Fuad Valiyev in D:\Projects\ms-adapter)
+2025-01-20T14:17:11.510+04:00  INFO 5760 --- [ms-adapter] [main] a.c.msadapter.MsAdapterApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-01-20T14:17:14.240+04:00  INFO 5760 --- [ms-adapter] [main] a.c.msadapter.MsAdapterApplication       : Started MsAdapterApplication in 3.334 seconds (process running for 4.697)
+2025-01-20T14:18:20.575+04:00  INFO 5760 --- [ms-adapter] [http-nio-8080-exec-1] a.c.msadapter.service.QueryService       : [requestNumber= REQ-20250119-0001, time=2025-01-20T14:18:20.575935700] Incoming query: INSERT INTO USERS (ID, NAME) VALUES (4, 'f')
+2025-01-20T14:18:20.590+04:00  INFO 5760 --- [ms-adapter] [http-nio-8080-exec-1] a.c.msadapter.service.QueryService       : [requestNumber= REQ-20250119-0001] Non-SELECT query affectedRows=1
+2025-01-20T14:18:20.646+04:00  INFO 5760 --- [ms-adapter] [http-nio-8080-exec-1] a.c.m.c.RequestResponseLoggingFilter     : >>> Incoming Request => method=POST, uri=/api/v1/query/execute, requestNumber= REQ-20250119-0001, body={
+  "requestNumber":" REQ-20250119-0001",
+  "query": "INSERT INTO USERS (ID, NAME) VALUES (4, 'f')"
+}
+
+2025-01-20T14:18:20.647+04:00  INFO 5760 --- [ms-adapter] [http-nio-8080-exec-1] a.c.m.c.RequestResponseLoggingFilter     : <<< Outgoing Response => status=200, duration=297ms, body={"message":"Successes"}
